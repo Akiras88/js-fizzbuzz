@@ -9,16 +9,16 @@
 var listNumber = document.getElementById('list-number')
 var number
 
-for( var i=0; i<101; i++) {
+for( var i = 0; i < 101; i++) {
     number = listNumber.innerHTML;
 
     // calculate the module
-    if( i % 5 == 0 ) {
-        listNumber.innerHTML = number + '<li>' + 'Buzz' + '</li>';
+    if ( i % 3 == 0 && i % 5 == 0 ) {
+        listNumber.innerHTML = number + '<li>' + 'FrizzBuzz' + '</li>';
     } else if ( i % 3 == 0 ) {
         listNumber.innerHTML = number + '<li>' + 'Frizz' + '</li>';
-    } else if ( i % 5 == 0 && i % 3 == 0 ) {
-        listNumber.innerHTML = number + '<li>' + 'FrizzBuzz' + '</li>';
+    } else if ( i % 5 == 0 ) {
+        listNumber.innerHTML = number + '<li>' + 'Buzz' + '</li>';     
     } else {
         listNumber.innerHTML = number + '<li>' + i + '</li>';
     }
